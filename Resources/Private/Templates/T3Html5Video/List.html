@@ -1,0 +1,57 @@
+
+<f:layout name="Default" />
+
+This Template is responsible for creating a table of domain objects.
+
+If you modify this template, do not forget to change the overwrite settings
+in /Configuration/ExtensionBuilder/settings.yaml:
+  Resources:
+    Private:
+      Templates:
+        List.html: keep
+
+Otherwise your changes will be overwritten the next time you save the extension in the extension builder
+
+<f:section name="main">
+<h1>Listing for T3Html5Video</h1>
+
+<f:flashMessages renderMode="div" />
+
+<table  class="tx_t3html5videoplayer" >
+	<tr>
+		<th><f:translate key="tx_t3html5videoplayer_domain_model_t3html5video.title" /></th>
+		<th><f:translate key="tx_t3html5videoplayer_domain_model_t3html5video.poster_image" /></th>
+		<th><f:translate key="tx_t3html5videoplayer_domain_model_t3html5video.mp4" /></th>
+		<th><f:translate key="tx_t3html5videoplayer_domain_model_t3html5video.ogg" /></th>
+		<th><f:translate key="tx_t3html5videoplayer_domain_model_t3html5video.webm" /></th>
+		<th><f:translate key="tx_t3html5videoplayer_domain_model_t3html5video.youtube_id" /></th>
+		<th><f:translate key="tx_t3html5videoplayer_domain_model_t3html5video.vimeo_id" /></th>
+		<th><f:translate key="tx_t3html5videoplayer_domain_model_t3html5video.video_autoplay" /></th>
+		<th><f:translate key="tx_t3html5videoplayer_domain_model_t3html5video.video_loop" /></th>
+		<th><f:translate key="tx_t3html5videoplayer_domain_model_t3html5video.video_controls" /></th>
+		<th><f:translate key="tx_t3html5videoplayer_domain_model_t3html5video.video_preloading" /></th>
+		<th> </th>
+		<th> </th>
+	</tr>
+
+	<f:for each="{t3Html5Videos}" as="t3Html5Video">
+		<tr>
+			<td><f:link.action action="show" arguments="{t3Html5Video : t3Html5Video}"> {t3Html5Video.title}</f:link.action></td>
+			<td><f:link.action action="show" arguments="{t3Html5Video : t3Html5Video}"> {t3Html5Video.posterImage.originalResource.name}</f:link.action></td>
+			<td><f:link.action action="show" arguments="{t3Html5Video : t3Html5Video}"> {t3Html5Video.mp4.originalResource.name}</f:link.action></td>
+			<td><f:link.action action="show" arguments="{t3Html5Video : t3Html5Video}"> {t3Html5Video.ogg.originalResource.name}</f:link.action></td>
+			<td><f:link.action action="show" arguments="{t3Html5Video : t3Html5Video}"> {t3Html5Video.webm.originalResource.name}</f:link.action></td>
+			<td><f:link.action action="show" arguments="{t3Html5Video : t3Html5Video}"> {t3Html5Video.youtubeId}</f:link.action></td>
+			<td><f:link.action action="show" arguments="{t3Html5Video : t3Html5Video}"> {t3Html5Video.vimeoId}</f:link.action></td>
+			<td><f:link.action action="show" arguments="{t3Html5Video : t3Html5Video}"> {t3Html5Video.videoAutoplay}</f:link.action></td>
+			<td><f:link.action action="show" arguments="{t3Html5Video : t3Html5Video}"> {t3Html5Video.videoLoop}</f:link.action></td>
+			<td><f:link.action action="show" arguments="{t3Html5Video : t3Html5Video}"> {t3Html5Video.videoControls}</f:link.action></td>
+			<td><f:link.action action="show" arguments="{t3Html5Video : t3Html5Video}"> {t3Html5Video.videoPreloading}</f:link.action></td>
+			<td><f:link.action action="edit" arguments="{t3Html5Video : t3Html5Video}">Edit</f:link.action></td>
+			<td><f:link.action action="delete" arguments="{t3Html5Video : t3Html5Video}">Delete</f:link.action></td>
+		</tr>
+	</f:for>
+</table>
+
+<f:link.action action="new">New T3Html5Video</f:link.action>
+</f:section>

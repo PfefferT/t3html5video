@@ -1,0 +1,15 @@
+
+plugin.tx_t3html5videoplayer_html5video {
+	view {
+		# cat=plugin.tx_t3html5videoplayer_html5video/file; type=string; label=Path to template root (FE)
+		templateRootPath = EXT:t3html5videoplayer/Resources/Private/Templates/
+		# cat=plugin.tx_t3html5videoplayer_html5video/file; type=string; label=Path to template partials (FE)
+		partialRootPath = EXT:t3html5videoplayer/Resources/Private/Partials/
+		# cat=plugin.tx_t3html5videoplayer_html5video/file; type=string; label=Path to template layouts (FE)
+		layoutRootPath = EXT:t3html5videoplayer/Resources/Private/Layouts/
+	}
+	persistence {
+		# cat=plugin.tx_t3html5videoplayer_html5video//a; type=string; label=Default storage PID
+		storagePid =
+	}
+}

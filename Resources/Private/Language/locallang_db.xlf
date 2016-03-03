@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2016-03-03T21:07:40Z" product-name="t3html5videoplayer">
+		<header/>
+		<body>
+			<trans-unit id="tx_t3html5videoplayer_domain_model_t3html5video">
+				<source>T3 Html5 Video</source>
+			</trans-unit>
+			<trans-unit id="tx_t3html5videoplayer_domain_model_t3html5video.title">
+				<source>Title</source>
+			</trans-unit>
+			<trans-unit id="tx_t3html5videoplayer_domain_model_t3html5video.poster_image">
+				<source>Poster Image</source>
+			</trans-unit>
+			<trans-unit id="tx_t3html5videoplayer_domain_model_t3html5video.mp4">
+				<source>Mp4</source>
+			</trans-unit>
+			<trans-unit id="tx_t3html5videoplayer_domain_model_t3html5video.ogg">
+				<source>Ogg</source>
+			</trans-unit>
+			<trans-unit id="tx_t3html5videoplayer_domain_model_t3html5video.webm">
+				<source>Webm</source>
+			</trans-unit>
+			<trans-unit id="tx_t3html5videoplayer_domain_model_t3html5video.youtube_id">
+				<source>Youtube Id</source>
+			</trans-unit>
+			<trans-unit id="tx_t3html5videoplayer_domain_model_t3html5video.vimeo_id">
+				<source>Vimeo Id</source>
+			</trans-unit>
+			<trans-unit id="tx_t3html5videoplayer_domain_model_t3html5video.video_autoplay">
+				<source>Video Autoplay</source>
+			</trans-unit>
+			<trans-unit id="tx_t3html5videoplayer_domain_model_t3html5video.video_loop">
+				<source>Video Loop</source>
+			</trans-unit>
+			<trans-unit id="tx_t3html5videoplayer_domain_model_t3html5video.video_controls">
+				<source>Video Controls</source>
+			</trans-unit>
+			<trans-unit id="tx_t3html5videoplayer_domain_model_t3html5video.video_preloading">
+				<source>Video Preloading</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

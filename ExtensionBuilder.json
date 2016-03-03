@@ -1,0 +1,191 @@
+{
+    "modules": [
+        {
+            "config": {
+                "position": [
+                    143,
+                    113.90906834799
+                ]
+            },
+            "name": "New Model Object",
+            "value": {
+                "actionGroup": {
+                    "_default0_list": true,
+                    "_default1_show": true,
+                    "_default2_new_create": false,
+                    "_default3_edit_update": false,
+                    "_default4_delete": false,
+                    "customActions": []
+                },
+                "name": "T3Html5Video",
+                "objectsettings": {
+                    "addDeletedField": true,
+                    "addHiddenField": true,
+                    "addStarttimeEndtimeFields": true,
+                    "aggregateRoot": true,
+                    "categorizable": false,
+                    "description": "",
+                    "mapToTable": "",
+                    "parentClass": "",
+                    "sorting": false,
+                    "type": "Entity",
+                    "uid": "1313804984407"
+                },
+                "propertyGroup": {
+                    "properties": [
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "Title",
+                            "propertyIsExcludeField": true,
+                            "propertyIsRequired": true,
+                            "propertyName": "title",
+                            "propertyType": "String",
+                            "uid": "1305594917137"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "poster_image",
+                            "propertyIsExcludeField": true,
+                            "propertyIsRequired": false,
+                            "propertyName": "posterImage",
+                            "propertyType": "Image",
+                            "uid": "1112076596031"
+                        },
+                        {
+                            "allowedFileTypes": "mp4",
+                            "maxItems": "1",
+                            "propertyDescription": "MP4",
+                            "propertyIsExcludeField": true,
+                            "propertyIsRequired": false,
+                            "propertyName": "mp4",
+                            "propertyType": "File",
+                            "uid": "1225138173012"
+                        },
+                        {
+                            "allowedFileTypes": "ogg",
+                            "maxItems": "1",
+                            "propertyDescription": "OGG",
+                            "propertyIsExcludeField": true,
+                            "propertyIsRequired": false,
+                            "propertyName": "ogg",
+                            "propertyType": "File",
+                            "uid": "45972914684"
+                        },
+                        {
+                            "allowedFileTypes": "webm",
+                            "maxItems": "1",
+                            "propertyDescription": "WebM",
+                            "propertyIsExcludeField": true,
+                            "propertyIsRequired": false,
+                            "propertyName": "webm",
+                            "propertyType": "File",
+                            "uid": "1305550493999"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "Youtube Id",
+                            "propertyIsExcludeField": true,
+                            "propertyIsRequired": false,
+                            "propertyName": "youtubeId",
+                            "propertyType": "String",
+                            "uid": "322953930800"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "Vimeo Id",
+                            "propertyIsExcludeField": true,
+                            "propertyIsRequired": false,
+                            "propertyName": "vimeoId",
+                            "propertyType": "String",
+                            "uid": "1092352531719"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "Autoplay",
+                            "propertyIsExcludeField": true,
+                            "propertyIsRequired": false,
+                            "propertyName": "videoAutoplay",
+                            "propertyType": "Boolean",
+                            "uid": "932497323179"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "Loop",
+                            "propertyIsExcludeField": true,
+                            "propertyIsRequired": false,
+                            "propertyName": "videoLoop",
+                            "propertyType": "Boolean",
+                            "uid": "589408622432"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "Controls",
+                            "propertyIsExcludeField": true,
+                            "propertyIsRequired": false,
+                            "propertyName": "videoControls",
+                            "propertyType": "Boolean",
+                            "uid": "515093148609"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "Preloading",
+                            "propertyIsExcludeField": true,
+                            "propertyIsRequired": false,
+                            "propertyName": "videoPreloading",
+                            "propertyType": "Select",
+                            "uid": "907746895969"
+                        }
+                    ]
+                },
+                "relationGroup": {
+                    "relations": []
+                }
+            }
+        }
+    ],
+    "properties": {
+        "backendModules": [],
+        "description": "Small lightweight Html5 Videoplayer for TYPO3 with additional Videoportal support of Youtube and Vimeo >= 6.2",
+        "emConf": {
+            "category": "plugin",
+            "custom_category": "",
+            "dependsOn": "typo3 => 6.2.0-6.2.99\n",
+            "disableLocalization": false,
+            "disableVersioning": false,
+            "skipGenerateDocumentationTemplate": true,
+            "sourceLanguage": "en",
+            "state": "alpha",
+            "version": "1.0.0.0"
+        },
+        "extensionKey": "t3html5videoplayer",
+        "name": "t3html5videoplayer",
+        "originalExtensionKey": "",
+        "persons": [],
+        "plugins": [
+            {
+                "actions": {
+                    "controllerActionCombinations": "Html5Video => render",
+                    "noncacheableActions": "",
+                    "switchableActions": ""
+                },
+                "key": "html5video",
+                "name": "Html5 Video"
+            }
+        ],
+        "vendorName": "Tripuls"
+    },
+    "wires": [],
+    "log": {
+        "last_modified": "2016-03-03 09:07",
+        "extension_builder_version": "6.2",
+        "be_user": " (1)"
+    }
+}
