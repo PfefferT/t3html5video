@@ -7,7 +7,7 @@
 				<source>Title</source>
 			</trans-unit>
 			<trans-unit id="poster_image.description">
-				<source>poster_image</source>
+				<source>Poster Image</source>
 			</trans-unit>
 			<trans-unit id="mp4.description">
 				<source>MP4</source>

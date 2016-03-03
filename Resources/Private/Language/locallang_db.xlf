@@ -39,6 +39,12 @@
 			<trans-unit id="tx_t3html5videoplayer_domain_model_t3html5video.video_preloading">
 				<source>Video Preloading</source>
 			</trans-unit>
+			<trans-unit id="tx_t3html5videoplayer_domain_model_t3html5video.label.video">
+				<source>Video</source>
+			</trans-unit>
+			<trans-unit id="tx_t3html5videoplayer_domain_model_t3html5video.label.configurations">
+				<source>Configurations</source>
+			</trans-unit>
 		</body>
 	</file>
 </xliff>

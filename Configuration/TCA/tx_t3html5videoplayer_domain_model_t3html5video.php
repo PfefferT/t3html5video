@@ -26,7 +26,7 @@ return array(
 		'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, title, poster_image, mp4, ogg, webm, youtube_id, vimeo_id, video_autoplay, video_loop, video_controls, video_preloading',
 	),
 	'types' => array(
-		'1' => array('showitem' => 'sys_language_uid;;;;1-1-1, l10n_parent, l10n_diffsource, hidden;;1, title, poster_image, mp4, ogg, webm, youtube_id, vimeo_id, video_autoplay, video_loop, video_controls, video_preloading, --div--;LLL:EXT:cms/locallang_ttc.xlf:tabs.access, starttime, endtime'),
+		'1' => array('showitem' => 'sys_language_uid;;;;1-1-1, l10n_parent, l10n_diffsource, hidden;;1, --div--;LLL:EXT:t3html5videoplayer/Resources/Private/Language/locallang_db.xlf:tx_t3html5videoplayer_domain_model_t3html5video.label.video, title, poster_image, mp4, ogg, webm, youtube_id, vimeo_id, --div--;LLL:EXT:t3html5videoplayer/Resources/Private/Language/locallang_db.xlf:tx_t3html5videoplayer_domain_model_t3html5video.label.configurations, video_autoplay, video_loop, video_controls, video_preloading, --div--;LLL:EXT:cms/locallang_ttc.xlf:tabs.access, starttime, endtime'),
 	),
 	'palettes' => array(
 		'1' => array('showitem' => ''),
