@@ -1,5 +1,5 @@
 <?php
-namespace Tripuls\T3html5videoplayer\Controller;
+namespace Tpf\T3html5videoplayer\Controller;
 
 
 /***************************************************************
@@ -35,7 +35,7 @@ class T3Html5VideoController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionCon
 	/**
 	 * t3Html5VideoRepository
 	 * 
-	 * @var \Tripuls\T3html5videoplayer\Domain\Repository\T3Html5VideoRepository
+	 * @var \Tpf\T3html5videoplayer\Domain\Repository\T3Html5VideoRepository
 	 * @inject
 	 */
 	protected $t3Html5VideoRepository = NULL;
@@ -53,10 +53,10 @@ class T3Html5VideoController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionCon
 	/**
 	 * action show
 	 * 
-	 * @param \Tripuls\T3html5videoplayer\Domain\Model\T3Html5Video $t3Html5Video
+	 * @param \Tpf\T3html5videoplayer\Domain\Model\T3Html5Video $t3Html5Video
 	 * @return void
 	 */
-	public function showAction(\Tripuls\T3html5videoplayer\Domain\Model\T3Html5Video $t3Html5Video) {
+	public function showAction(\Tpf\T3html5videoplayer\Domain\Model\T3Html5Video $t3Html5Video) {
 		$this->view->assign('t3Html5Video', $t3Html5Video);
 	}
 

@@ -1,5 +1,5 @@
 <?php
-namespace Tripuls\T3html5videoplayer\Domain\Model;
+namespace Tpf\T3html5videoplayer\Domain\Model;
 
 
 /***************************************************************

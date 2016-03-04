@@ -4,7 +4,7 @@ if (!defined('TYPO3_MODE')) {
 }
 
 \TYPO3\CMS\Extbase\Utility\ExtensionUtility::registerPlugin(
-	'Tripuls.' . $_EXTKEY,
+	'Tpf.' . $_EXTKEY,
 	'Html5video',
 	'Html5 Video'
 );

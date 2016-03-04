@@ -1,5 +1,5 @@
 <?php
-namespace Tripuls\T3html5videoplayer\Tests\Unit\Controller;
+namespace Tpf\T3html5videoplayer\Tests\Unit\Controller;
 /***************************************************************
  *  Copyright notice
  *
@@ -24,18 +24,18 @@ namespace Tripuls\T3html5videoplayer\Tests\Unit\Controller;
  ***************************************************************/
 
 /**
- * Test case for class Tripuls\T3html5videoplayer\Controller\T3Html5VideoController.
+ * Test case for class Tpf\T3html5videoplayer\Controller\T3Html5VideoController.
  *
  */
 class T3Html5VideoControllerTest extends \TYPO3\CMS\Core\Tests\UnitTestCase {
 
 	/**
-	 * @var \Tripuls\T3html5videoplayer\Controller\T3Html5VideoController
+	 * @var \Tpf\T3html5videoplayer\Controller\T3Html5VideoController
 	 */
 	protected $subject = NULL;
 
 	public function setUp() {
-		$this->subject = $this->getMock('Tripuls\\T3html5videoplayer\\Controller\\T3Html5VideoController', array('redirect', 'forward', 'addFlashMessage'), array(), '', FALSE);
+		$this->subject = $this->getMock('Tpf\\T3html5videoplayer\\Controller\\T3Html5VideoController', array('redirect', 'forward', 'addFlashMessage'), array(), '', FALSE);
 	}
 
 	public function tearDown() {
@@ -49,7 +49,7 @@ class T3Html5VideoControllerTest extends \TYPO3\CMS\Core\Tests\UnitTestCase {
 
 		$allT3Html5Videos = $this->getMock('TYPO3\\CMS\\Extbase\\Persistence\\ObjectStorage', array(), array(), '', FALSE);
 
-		$t3Html5VideoRepository = $this->getMock('Tripuls\\T3html5videoplayer\\Domain\\Repository\\T3Html5VideoRepository', array('findAll'), array(), '', FALSE);
+		$t3Html5VideoRepository = $this->getMock('Tpf\\T3html5videoplayer\\Domain\\Repository\\T3Html5VideoRepository', array('findAll'), array(), '', FALSE);
 		$t3Html5VideoRepository->expects($this->once())->method('findAll')->will($this->returnValue($allT3Html5Videos));
 		$this->inject($this->subject, 't3Html5VideoRepository', $t3Html5VideoRepository);
 
@@ -64,7 +64,7 @@ class T3Html5VideoControllerTest extends \TYPO3\CMS\Core\Tests\UnitTestCase {
 	 * @test
 	 */
 	public function showActionAssignsTheGivenT3Html5VideoToView() {
-		$t3Html5Video = new \Tripuls\T3html5videoplayer\Domain\Model\T3Html5Video();
+		$t3Html5Video = new \Tpf\T3html5videoplayer\Domain\Model\T3Html5Video();
 
 		$view = $this->getMock('TYPO3\\CMS\\Extbase\\Mvc\\View\\ViewInterface');
 		$this->inject($this->subject, 'view', $view);

@@ -4,7 +4,7 @@ if (!defined('TYPO3_MODE')) {
 }
 
 \TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
-	'Tripuls.' . $_EXTKEY,
+	'Tpf.' . $_EXTKEY,
 	'Html5video',
 	array(
 		'T3Html5Video' => 'list',

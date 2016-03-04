@@ -1,6 +1,6 @@
 <?php
 
-namespace Tripuls\T3html5videoplayer\Tests\Unit\Domain\Model;
+namespace Tpf\T3html5videoplayer\Tests\Unit\Domain\Model;
 
 /***************************************************************
  *  Copyright notice
@@ -27,7 +27,7 @@ namespace Tripuls\T3html5videoplayer\Tests\Unit\Domain\Model;
  ***************************************************************/
 
 /**
- * Test case for class \Tripuls\T3html5videoplayer\Domain\Model\T3Html5Video.
+ * Test case for class \Tpf\T3html5videoplayer\Domain\Model\T3Html5Video.
  *
  * @copyright Copyright belongs to the respective authors
  * @license http://www.gnu.org/licenses/gpl.html GNU General Public License, version 3 or later
@@ -35,12 +35,12 @@ namespace Tripuls\T3html5videoplayer\Tests\Unit\Domain\Model;
  */
 class T3Html5VideoTest extends \TYPO3\CMS\Core\Tests\UnitTestCase {
 	/**
-	 * @var \Tripuls\T3html5videoplayer\Domain\Model\T3Html5Video
+	 * @var \Tpf\T3html5videoplayer\Domain\Model\T3Html5Video
 	 */
 	protected $subject = NULL;
 
 	public function setUp() {
-		$this->subject = new \Tripuls\T3html5videoplayer\Domain\Model\T3Html5Video();
+		$this->subject = new \Tpf\T3html5videoplayer\Domain\Model\T3Html5Video();
 	}
 
 	public function tearDown() {
