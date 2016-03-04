@@ -16,7 +16,5 @@ Otherwise your changes will be overwritten the next time you save the extension 
 <h1>Single View for T3Html5Video</h1>
 
 <f:flashMessages renderMode="div" />
-<f:render partial="T3Html5Video/Properties" arguments="{t3Html5Video:t3Html5Video}" />
-<f:link.action action="list">Back to list</f:link.action><br />
-<f:link.action action="new">New T3Html5Video</f:link.action>
+<f:render partial="T3Html5Video/SingleRecord" arguments="{video:t3Html5Videos}" />
 </f:section>

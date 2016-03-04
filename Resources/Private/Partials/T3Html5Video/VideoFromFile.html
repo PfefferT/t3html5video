@@ -1,0 +1,17 @@
+<video class="video video__file" id="{video.uid}"
+ {f:if(condition: '{video.videoControls}', then: 'controls="controls"', else: '')}
+ {f:if(condition: '{video.videoAutoplay}', then: 'autoplay="true"', else: '')}
+ {f:if(condition: '{video.videoLoop}', then: 'loop="true"', else: '')}
+ {f:if(condition: '{video.videoPreloading}', then: 'preload="true"', else: '')}
+ {f:if(condition: '{video.posterImage}', then: 'poster="{video.posterImage.originalResource.publicUrl}"', else: '')}
+>
+	<f:if condition="{video.mp4}">
+		<source src="{video.mp4.originalResource.publicUrl}" type="video/mp4"/>
+	</f:if>
+	<f:if condition="{video.ogg}">
+		<source src="{video.ogg.originalResource.publicUrl}" type="video/ogg"/>
+	</f:if>
+	<f:if condition="{video.mp4}">
+		<source src="{video.webm.originalResource.publicUrl}" type="video/webm"/>
+	</f:if>
+</video>

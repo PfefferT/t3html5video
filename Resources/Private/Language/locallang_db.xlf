@@ -6,6 +6,9 @@
 			<trans-unit id="tx_t3html5videoplayer_domain_model_t3html5video">
 				<source>T3 Html5 Video</source>
 			</trans-unit>
+			<trans-unit id="tx_t3html5videoplayer_domain_model_t3html5video.type">
+				<source>Type</source>
+			</trans-unit>
 			<trans-unit id="tx_t3html5videoplayer_domain_model_t3html5video.title">
 				<source>Title</source>
 			</trans-unit>
@@ -39,11 +42,32 @@
 			<trans-unit id="tx_t3html5videoplayer_domain_model_t3html5video.video_preloading">
 				<source>Video Preloading</source>
 			</trans-unit>
+			<trans-unit id="tx_t3html5videoplayer_domain_model_t3html5video.vimeo_controls_color">
+				<source>Color of Controls</source>
+			</trans-unit>
 			<trans-unit id="tx_t3html5videoplayer_domain_model_t3html5video.label.video">
 				<source>Video</source>
 			</trans-unit>
 			<trans-unit id="tx_t3html5videoplayer_domain_model_t3html5video.label.configurations">
 				<source>Configurations</source>
+			</trans-unit>
+			<trans-unit id="tx_t3html5videoplayer_domain_model_t3html5video.preload.auto">
+				<source>Auto</source>
+			</trans-unit>
+			<trans-unit id="tx_t3html5videoplayer_domain_model_t3html5video.preload.none">
+				<source>None</source>
+			</trans-unit>
+			<trans-unit id="tx_t3html5videoplayer_domain_model_t3html5video.preload.metadata">
+				<source>Metadata</source>
+			</trans-unit>
+			<trans-unit id="tx_t3html5videoplayer_domain_model_t3html5video.type.file">
+				<source>File</source>
+			</trans-unit>
+			<trans-unit id="tx_t3html5videoplayer_domain_model_t3html5video.type.youtube">
+				<source>Youtube</source>
+			</trans-unit>
+			<trans-unit id="tx_t3html5videoplayer_domain_model_t3html5video.type.vimeo">
+				<source>Vimeo</source>
 			</trans-unit>
 		</body>
 	</file>

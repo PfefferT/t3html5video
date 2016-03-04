@@ -7,8 +7,7 @@ if (!defined('TYPO3_MODE')) {
 	'Tripuls.' . $_EXTKEY,
 	'Html5video',
 	array(
-		'Html5Video' => 'render',
-		
+		'T3Html5Video' => 'list',
 	),
 	// non-cacheable actions
 	array(
