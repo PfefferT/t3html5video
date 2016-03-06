@@ -43,6 +43,12 @@ CREATE TABLE tx_t3html5videoplayer_domain_model_t3html5video (
   youtube_rel tinyint(1) unsigned DEFAULT '1' NOT NULL,
   youtube_showinfo tinyint(1) unsigned DEFAULT '1' NOT NULL,
 	vimeo_controls_color varchar(6) DEFAULT '0' NOT NULL,
+	vimeo_autopause tinyint(1) DEFAULT '1' NOT NULL,
+	vimeo_bagde tinyint(1) DEFAULT '1' NOT NULL,
+	vimeo_byline tinyint(1) DEFAULT '1' NOT NULL,
+	vimeo_portrait tinyint(1) DEFAULT '1' NOT NULL,
+	vimeo_title tinyint(1) DEFAULT '1' NOT NULL,
+	vimeo_player_id varchar(255) DEFAULT '' NOT NULL,
 
 	tstamp int(11) unsigned DEFAULT '0' NOT NULL,
 	crdate int(11) unsigned DEFAULT '0' NOT NULL,

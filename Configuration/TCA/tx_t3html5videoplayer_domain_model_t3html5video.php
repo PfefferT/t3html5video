@@ -25,10 +25,10 @@ return array(
 		'requestUpdate' => 'type'
 	),
 	'interface' => array(
-		'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, type, title, poster_image, mp4, ogg, webm, youtube_id, vimeo_id, video_autoplay, video_loop, video_controls, video_preloading, youtube_start, youtube_end, youtube_color, youtube_theme, youtube_autohide, youtube_disable_keyboard, youtube_enable_js_api, youtube_fullscreen, youtube_hl, youtube_list_type, youtube_list, youtube_playlist, youtube_origin, youtube_modestbranding, youtube_player_api_id, youtube_plays_inline, youtube_rel, youtube_showinfo, youtube_cc_load_policy, youtube_iv_load_policy, width, height, muted, mediagroup, vimeo_controls_color',
+		'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, type, title, poster_image, mp4, ogg, webm, youtube_id, vimeo_id, video_autoplay, video_loop, video_controls, video_preloading, youtube_start, youtube_end, youtube_color, youtube_theme, youtube_autohide, youtube_disable_keyboard, youtube_enable_js_api, youtube_fullscreen, youtube_hl, youtube_list_type, youtube_list, youtube_playlist, youtube_origin, youtube_modestbranding, youtube_player_api_id, youtube_plays_inline, youtube_rel, youtube_showinfo, youtube_cc_load_policy, youtube_iv_load_policy, width, height, muted, mediagroup, vimeo_autopause, vimeo_badge, vimeo_byline, vimeo_portrait, vimeo_title, vimeo_player_id,vimeo_controls_color',
 	),
 	'types' => array(
-		'1' => array('showitem' => 'sys_language_uid;;;;1-1-1, l10n_parent, l10n_diffsource, hidden;;1, --div--;LLL:EXT:t3html5videoplayer/Resources/Private/Language/locallang_db.xlf:tx_t3html5videoplayer_domain_model_t3html5video.label.video, type, title, poster_image, mp4, ogg, webm, youtube_id, vimeo_id, --div--;LLL:EXT:t3html5videoplayer/Resources/Private/Language/locallang_db.xlf:tx_t3html5videoplayer_domain_model_t3html5video.label.configurations, video_autoplay, video_loop, video_controls, video_preloading, youtube_start, youtube_end, youtube_color, youtube_theme, youtube_autohide, youtube_disable_keyboard, youtube_enable_js_api, youtube_fullscreen, youtube_hl, youtube_list_type, youtube_list, youtube_playlist, youtube_origin, youtube_modestbranding, youtube_player_api_id, youtube_plays_inline, youtube_rel, youtube_showinfo, youtube_cc_load_policy, youtube_iv_load_policy, width, height, muted, mediagroup, vimeo_controls_color, --div--;LLL:EXT:cms/locallang_ttc.xlf:tabs.access, starttime, endtime'),
+		'1' => array('showitem' => 'sys_language_uid;;;;1-1-1, l10n_parent, l10n_diffsource, hidden;;1, --div--;LLL:EXT:t3html5videoplayer/Resources/Private/Language/locallang_db.xlf:tx_t3html5videoplayer_domain_model_t3html5video.label.video, type, title, poster_image, mp4, ogg, webm, youtube_id, vimeo_id, --div--;LLL:EXT:t3html5videoplayer/Resources/Private/Language/locallang_db.xlf:tx_t3html5videoplayer_domain_model_t3html5video.label.configurations, video_autoplay, video_loop, video_controls, video_preloading, youtube_start, youtube_end, youtube_color, youtube_theme, youtube_autohide, youtube_disable_keyboard, youtube_enable_js_api, youtube_fullscreen, youtube_hl, youtube_list_type, youtube_list, youtube_playlist, youtube_origin, youtube_modestbranding, youtube_player_api_id, youtube_plays_inline, youtube_rel, youtube_showinfo, youtube_cc_load_policy, youtube_iv_load_policy, width, height, muted, mediagroup, vimeo_autopause, vimeo_badge, vimeo_byline, vimeo_portrait, vimeo_title, vimeo_player_id, vimeo_controls_color, --div--;LLL:EXT:cms/locallang_ttc.xlf:tabs.access, starttime, endtime'),
 	),
 	'palettes' => array(
 		'1' => array('showitem' => ''),
@@ -611,7 +611,6 @@ return array(
 			),
 		),
 		'width' => array(
-			'displayCond' => 'FIELD:type:=:file',
 			'exclude' => 1,
 			'label' => 'LLL:EXT:t3html5videoplayer/Resources/Private/Language/locallang_db.xlf:tx_t3html5videoplayer_domain_model_t3html5video.width',
 			'config' => array(
@@ -622,7 +621,6 @@ return array(
 			),
 		),
 		'height' => array(
-			'displayCond' => 'FIELD:type:=:file',
 			'exclude' => 1,
 			'label' => 'LLL:EXT:t3html5videoplayer/Resources/Private/Language/locallang_db.xlf:tx_t3html5videoplayer_domain_model_t3html5video.height',
 			'config' => array(
@@ -655,12 +653,68 @@ return array(
 		'vimeo_controls_color' => array(
 			'displayCond' => 'FIELD:type:=:vimeo',
 			'exclude' => 1,
-			'label' => 'LLL:EXT:t3html5videoplayer/Resources/Private/Language/locallang_db.xlf:tx_t3html5videoplayer_domain_model_t3html5video.vimeo_controls_color',
+			'label' => 'LLL:EXT:t3html5videoplayer/Resources/Private/Language/locallang_db.xlf:tx_t3html5videoplayer_domain_model_t3html5video.vimeo.controls_color',
 			'config' => array(
 				'type' => 'input',
 				'size' => 30,
 				'eval' => 'trim',
 				'default' => '00adef'
+			),
+		),
+		'vimeo_autopause' => array(
+			'displayCond' => 'FIELD:type:=:vimeo',
+			'exclude' => 1,
+			'label' => 'LLL:EXT:t3html5videoplayer/Resources/Private/Language/locallang_db.xlf:tx_t3html5videoplayer_domain_model_t3html5video.vimeo.autopause',
+			'config' => array(
+				'type' => 'check',
+				'default' => 1
+			)
+		),
+		'vimeo_badge' => array(
+			'displayCond' => 'FIELD:type:=:vimeo',
+			'exclude' => 1,
+			'label' => 'LLL:EXT:t3html5videoplayer/Resources/Private/Language/locallang_db.xlf:tx_t3html5videoplayer_domain_model_t3html5video.vimeo.bagde',
+			'config' => array(
+				'type' => 'check',
+				'default' => 1
+			)
+		),
+		'vimeo_byline' => array(
+			'displayCond' => 'FIELD:type:=:vimeo',
+			'exclude' => 1,
+			'label' => 'LLL:EXT:t3html5videoplayer/Resources/Private/Language/locallang_db.xlf:tx_t3html5videoplayer_domain_model_t3html5video.vimeo.byline',
+			'config' => array(
+				'type' => 'check',
+				'default' => 1
+			)
+		),
+		'vimeo_portrait' => array(
+			'displayCond' => 'FIELD:type:=:vimeo',
+			'exclude' => 1,
+			'label' => 'LLL:EXT:t3html5videoplayer/Resources/Private/Language/locallang_db.xlf:tx_t3html5videoplayer_domain_model_t3html5video.vimeo.portrait',
+			'config' => array(
+				'type' => 'check',
+				'default' => 1
+			)
+		),
+		'vimeo_title' => array(
+			'displayCond' => 'FIELD:type:=:vimeo',
+			'exclude' => 1,
+			'label' => 'LLL:EXT:t3html5videoplayer/Resources/Private/Language/locallang_db.xlf:tx_t3html5videoplayer_domain_model_t3html5video.vimeo.title',
+			'config' => array(
+				'type' => 'check',
+				'default' => 1
+			)
+		),
+		'vimeo_player_id' => array(
+			'displayCond' => 'FIELD:type:=:vimeo',
+			'exclude' => 1,
+			'label' => 'LLL:EXT:t3html5videoplayer/Resources/Private/Language/locallang_db.xlf:tx_t3html5videoplayer_domain_model_t3html5video.vimeo.player_id',
+			'config' => array(
+				'type' => 'input',
+				'default' => '',
+				'size' => 30,
+				'eval' => 'trim'
 			),
 		),
 	),

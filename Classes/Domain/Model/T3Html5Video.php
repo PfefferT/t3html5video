@@ -85,9 +85,9 @@ class T3Html5Video extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	/**
 	 * $youtubeCcLoadPolicy
 	 *
-	 * @var int
+	 * @var bool
 	 */
-	protected $youtubeCcLoadPolicy = 0;
+	protected $youtubeCcLoadPolicy = false;
 
 	/**
 	 * $youtubeColor
@@ -120,23 +120,23 @@ class T3Html5Video extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	/**
 	 * $youtubeEnableJsApi
 	 *
-	 * @var int
+	 * @var bool
 	 */
-	protected $youtubeEnableJsApi = 0;
+	protected $youtubeEnableJsApi = false;
 
 	/**
 	 * $youtubeDisableKeyboard
 	 *
-	 * @var int
+	 * @var bool
 	 */
-	protected $youtubeDisableKeyboard = 0;
+	protected $youtubeDisableKeyboard = false;
 
 	/**
 	 * $youtubeFullscreen
 	 *
-	 * @var int
+	 * @var bool
 	 */
-	protected $youtubeFullscreen = 1;
+	protected $youtubeFullscreen = true;
 
 	/**
 	 * $youtubeHl
@@ -169,9 +169,9 @@ class T3Html5Video extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	/**
 	 * $youtubeModestbranding
 	 *
-	 * @var int
+	 * @var bool
 	 */
-	protected $youtubeModestbranding = 0;
+	protected $youtubeModestbranding = false;
 
 	/**
 	 * $youtubeOrigin
@@ -197,23 +197,23 @@ class T3Html5Video extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	/**
 	 * $youtubePlaysInline
 	 *
-	 * @var int
+	 * @var bool
 	 */
-	protected $youtubePlaysInline = 0;
+	protected $youtubePlaysInline = false;
 
 	/**
 	 * $youtubeRel
 	 *
-	 * @var int
+	 * @var bool
 	 */
-	protected $youtubeRel = 1;
+	protected $youtubeRel = true;
 
 	/**
 	 * $youtubeShowInfo
 	 *
-	 * @var int
+	 * @var bool
 	 */
-	protected $youtubeShowInfo = 1;
+	protected $youtubeShowInfo = true;
 
 	/**
 	 * Vimeo Id
@@ -269,21 +269,479 @@ class T3Html5Video extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	 *
 	 * @var bool
 	 */
-	protected  $muted = FALSE;
+	protected $muted = FALSE;
 
 	/**
 	 * Width
 	 *
 	 * @var int
 	 */
-	protected  $width = 0;
+	protected $width = 0;
 
 	/**
 	 * Height
 	 *
 	 * @var int
 	 */
-	protected  $height = 0;
+	protected $height = 0;
+
+	/**
+	 * Autopause
+	 *
+	 * @var bool
+	 */
+	protected $vimeoAutoPause = true;
+
+	/**
+	 * Badge
+	 *
+	 * @var bool
+	 */
+	protected $vimeoBadge = true;
+
+	/**
+	 * Byline
+	 *
+	 * @var bool
+	 */
+	protected $vimeoByline = true;
+
+	/**
+	 * Portrait
+	 *
+	 * @var bool
+	 */
+	protected $vimeoPortrait = true;
+
+	/**
+	 * Title
+	 *
+	 * @var bool
+	 */
+	protected $vimeoTitle = true;
+
+	/**
+	 * PlayerId
+	 *
+	 * @var string
+	 */
+	protected $vimeoPlayerId = '';
+
+	/**
+	 * @return int
+	 */
+	public function getYoutubeAutohide()
+	{
+		return $this->youtubeAutohide;
+	}
+
+	/**
+	 * @param int $youtubeAutohide
+	 */
+	public function setYoutubeAutohide($youtubeAutohide)
+	{
+		$this->youtubeAutohide = $youtubeAutohide;
+	}
+
+	/**
+	 * @return boolean
+	 */
+	public function isYoutubeCcLoadPolicy()
+	{
+		return $this->youtubeCcLoadPolicy;
+	}
+
+	/**
+	 * @param boolean $youtubeCcLoadPolicy
+	 */
+	public function setYoutubeCcLoadPolicy($youtubeCcLoadPolicy)
+	{
+		$this->youtubeCcLoadPolicy = $youtubeCcLoadPolicy;
+	}
+
+	/**
+	 * @return string
+	 */
+	public function getYoutubeColor()
+	{
+		return $this->youtubeColor;
+	}
+
+	/**
+	 * @param string $youtubeColor
+	 */
+	public function setYoutubeColor($youtubeColor)
+	{
+		$this->youtubeColor = $youtubeColor;
+	}
+
+	/**
+	 * @return string
+	 */
+	public function getYoutubeTheme()
+	{
+		return $this->youtubeTheme;
+	}
+
+	/**
+	 * @param string $youtubeTheme
+	 */
+	public function setYoutubeTheme($youtubeTheme)
+	{
+		$this->youtubeTheme = $youtubeTheme;
+	}
+
+	/**
+	 * @return int
+	 */
+	public function getYoutubeStart()
+	{
+		return $this->youtubeStart;
+	}
+
+	/**
+	 * @param int $youtubeStart
+	 */
+	public function setYoutubeStart($youtubeStart)
+	{
+		$this->youtubeStart = $youtubeStart;
+	}
+
+	/**
+	 * @return int
+	 */
+	public function getYoutubeEnd()
+	{
+		return $this->youtubeEnd;
+	}
+
+	/**
+	 * @param int $youtubeEnd
+	 */
+	public function setYoutubeEnd($youtubeEnd)
+	{
+		$this->youtubeEnd = $youtubeEnd;
+	}
+
+	/**
+	 * @return boolean
+	 */
+	public function isYoutubeEnableJsApi()
+	{
+		return $this->youtubeEnableJsApi;
+	}
+
+	/**
+	 * @param boolean $youtubeEnableJsApi
+	 */
+	public function setYoutubeEnableJsApi($youtubeEnableJsApi)
+	{
+		$this->youtubeEnableJsApi = $youtubeEnableJsApi;
+	}
+
+	/**
+	 * @return boolean
+	 */
+	public function isYoutubeDisableKeyboard()
+	{
+		return $this->youtubeDisableKeyboard;
+	}
+
+	/**
+	 * @param boolean $youtubeDisableKeyboard
+	 */
+	public function setYoutubeDisableKeyboard($youtubeDisableKeyboard)
+	{
+		$this->youtubeDisableKeyboard = $youtubeDisableKeyboard;
+	}
+
+	/**
+	 * @return boolean
+	 */
+	public function isYoutubeFullscreen()
+	{
+		return $this->youtubeFullscreen;
+	}
+
+	/**
+	 * @param boolean $youtubeFullscreen
+	 */
+	public function setYoutubeFullscreen($youtubeFullscreen)
+	{
+		$this->youtubeFullscreen = $youtubeFullscreen;
+	}
+
+	/**
+	 * @return string
+	 */
+	public function getYoutubeHl()
+	{
+		return $this->youtubeHl;
+	}
+
+	/**
+	 * @param string $youtubeHl
+	 */
+	public function setYoutubeHl($youtubeHl)
+	{
+		$this->youtubeHl = $youtubeHl;
+	}
+
+	/**
+	 * @return int
+	 */
+	public function getYoutubeIvLoadPolicy()
+	{
+		return $this->youtubeIvLoadPolicy;
+	}
+
+	/**
+	 * @param int $youtubeIvLoadPolicy
+	 */
+	public function setYoutubeIvLoadPolicy($youtubeIvLoadPolicy)
+	{
+		$this->youtubeIvLoadPolicy = $youtubeIvLoadPolicy;
+	}
+
+	/**
+	 * @return string
+	 */
+	public function getYoutubeListType()
+	{
+		return $this->youtubeListType;
+	}
+
+	/**
+	 * @param string $youtubeListType
+	 */
+	public function setYoutubeListType($youtubeListType)
+	{
+		$this->youtubeListType = $youtubeListType;
+	}
+
+	/**
+	 * @return string
+	 */
+	public function getYoutubeLlist()
+	{
+		return $this->youtubeLlist;
+	}
+
+	/**
+	 * @param string $youtubeLlist
+	 */
+	public function setYoutubeLlist($youtubeLlist)
+	{
+		$this->youtubeLlist = $youtubeLlist;
+	}
+
+	/**
+	 * @return boolean
+	 */
+	public function isYoutubeModestbranding()
+	{
+		return $this->youtubeModestbranding;
+	}
+
+	/**
+	 * @param boolean $youtubeModestbranding
+	 */
+	public function setYoutubeModestbranding($youtubeModestbranding)
+	{
+		$this->youtubeModestbranding = $youtubeModestbranding;
+	}
+
+	/**
+	 * @return string
+	 */
+	public function getYoutubeOrigin()
+	{
+		return $this->youtubeOrigin;
+	}
+
+	/**
+	 * @param string $youtubeOrigin
+	 */
+	public function setYoutubeOrigin($youtubeOrigin)
+	{
+		$this->youtubeOrigin = $youtubeOrigin;
+	}
+
+	/**
+	 * @return string
+	 */
+	public function getYoutubePlayerApiId()
+	{
+		return $this->youtubePlayerApiId;
+	}
+
+	/**
+	 * @param string $youtubePlayerApiId
+	 */
+	public function setYoutubePlayerApiId($youtubePlayerApiId)
+	{
+		$this->youtubePlayerApiId = $youtubePlayerApiId;
+	}
+
+	/**
+	 * @return string
+	 */
+	public function getYoutubePlaylist()
+	{
+		return $this->youtubePlaylist;
+	}
+
+	/**
+	 * @param string $youtubePlaylist
+	 */
+	public function setYoutubePlaylist($youtubePlaylist)
+	{
+		$this->youtubePlaylist = $youtubePlaylist;
+	}
+
+	/**
+	 * @return boolean
+	 */
+	public function isYoutubePlaysInline()
+	{
+		return $this->youtubePlaysInline;
+	}
+
+	/**
+	 * @param boolean $youtubePlaysInline
+	 */
+	public function setYoutubePlaysInline($youtubePlaysInline)
+	{
+		$this->youtubePlaysInline = $youtubePlaysInline;
+	}
+
+	/**
+	 * @return boolean
+	 */
+	public function isYoutubeRel()
+	{
+		return $this->youtubeRel;
+	}
+
+	/**
+	 * @param boolean $youtubeRel
+	 */
+	public function setYoutubeRel($youtubeRel)
+	{
+		$this->youtubeRel = $youtubeRel;
+	}
+
+	/**
+	 * @return boolean
+	 */
+	public function isYoutubeShowInfo()
+	{
+		return $this->youtubeShowInfo;
+	}
+
+	/**
+	 * @param boolean $youtubeShowInfo
+	 */
+	public function setYoutubeShowInfo($youtubeShowInfo)
+	{
+		$this->youtubeShowInfo = $youtubeShowInfo;
+	}
+
+	/**
+	 * @return boolean
+	 */
+	public function isVimeoAutoPause()
+	{
+		return $this->vimeoAutoPause;
+	}
+
+	/**
+	 * @param boolean $vimeoAutoPause
+	 */
+	public function setVimeoAutoPause($vimeoAutoPause)
+	{
+		$this->vimeoAutoPause = $vimeoAutoPause;
+	}
+
+	/**
+	 * @return boolean
+	 */
+	public function isVimeoBadge()
+	{
+		return $this->vimeoBadge;
+	}
+
+	/**
+	 * @param boolean $vimeoBadge
+	 */
+	public function setVimeoBadge($vimeoBadge)
+	{
+		$this->vimeoBadge = $vimeoBadge;
+	}
+
+	/**
+	 * @return boolean
+	 */
+	public function isVimeoByline()
+	{
+		return $this->vimeoByline;
+	}
+
+	/**
+	 * @param boolean $vimeoByline
+	 */
+	public function setVimeoByline($vimeoByline)
+	{
+		$this->vimeoByline = $vimeoByline;
+	}
+
+	/**
+	 * @return boolean
+	 */
+	public function isVimeoPortrait()
+	{
+		return $this->vimeoPortrait;
+	}
+
+	/**
+	 * @param boolean $vimeoPortrait
+	 */
+	public function setVimeoPortrait($vimeoPortrait)
+	{
+		$this->vimeoPortrait = $vimeoPortrait;
+	}
+
+	/**
+	 * @return boolean
+	 */
+	public function isVimeoTitle()
+	{
+		return $this->vimeoTitle;
+	}
+
+	/**
+	 * @param boolean $vimeoTitle
+	 */
+	public function setVimeoTitle($vimeoTitle)
+	{
+		$this->vimeoTitle = $vimeoTitle;
+	}
+
+	/**
+	 * @return string
+	 */
+	public function getVimeoPlayerId()
+	{
+		return $this->vimeoPlayerId;
+	}
+
+	/**
+	 * @param string $vimeoPlayerId
+	 */
+	public function setVimeoPlayerId($vimeoPlayerId)
+	{
+		$this->vimeoPlayerId = $vimeoPlayerId;
+	}
 
 	/**
 	 * @return string

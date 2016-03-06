@@ -132,6 +132,24 @@
 			<trans-unit id="tx_t3html5videoplayer_domain_model_t3html5video.youtube.theme">
 				<source>Theme</source>
 			</trans-unit>
+			<trans-unit id="tx_t3html5videoplayer_domain_model_t3html5video.vimeo.badge">
+				<source>Badge</source>
+			</trans-unit>
+			<trans-unit id="tx_t3html5videoplayer_domain_model_t3html5video.vimeo.autopause">
+				<source>Autopause</source>
+			</trans-unit>
+			<trans-unit id="tx_t3html5videoplayer_domain_model_t3html5video.vimeo.byline">
+				<source>Byline</source>
+			</trans-unit>
+			<trans-unit id="tx_t3html5videoplayer_domain_model_t3html5video.vimeo.player_id">
+				<source>Player Id</source>
+			</trans-unit>
+			<trans-unit id="tx_t3html5videoplayer_domain_model_t3html5video.vimeo.portrait">
+				<source>Portrait</source>
+			</trans-unit>
+			<trans-unit id="tx_t3html5videoplayer_domain_model_t3html5video.vimeo.title">
+				<source>Title</source>
+			</trans-unit>
 			<trans-unit id="tx_t3html5videoplayer_domain_model_t3html5video.type.file">
 				<source>File</source>
 			</trans-unit>
