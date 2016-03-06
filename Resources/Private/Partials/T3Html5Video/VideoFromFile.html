@@ -4,6 +4,10 @@
  {f:if(condition: '{video.videoLoop}', then: 'loop="true"', else: '')}
  {f:if(condition: '{video.videoPreloading}', then: 'preload="true"', else: '')}
  {f:if(condition: '{video.posterImage}', then: 'poster="{video.posterImage.originalResource.publicUrl}"', else: '')}
+ {f:if(condition: '{video.muted}', then: 'muted="muted"', else: '')}
+ {f:if(condition: '{video.width}', then: 'width="{video.width}"', else: '')}
+ {f:if(condition: '{video.height}', then: 'height="{video.height}"', else: '')}
+ {f:if(condition: '{video.mediagroup}', then: 'mediagroup="{video.mediagroup}"', else: '')}
 >
 	<f:if condition="{video.mp4}">
 		<source src="{video.mp4.originalResource.publicUrl}" type="video/mp4"/>

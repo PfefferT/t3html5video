@@ -47,7 +47,7 @@ class T3Html5VideoController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionCon
 	 */
 	public function listAction() {
 		$t3Html5Videos = $this->t3Html5VideoRepository->findAll();
-		$this->view->assign('t3Html5Videos', $t3Html5Videos);
+		$this->view->assign('t3Html5Videos', array($t3Html5Videos));
 	}
 
 	/**

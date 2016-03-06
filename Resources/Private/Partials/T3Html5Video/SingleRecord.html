@@ -1,4 +1,4 @@
-<switch expression="{video.type}">
+<f:switch expression="{video.type}">
 	<f:case value="file">
 		<f:render partial="T3Html5Video/VideoFromFile" arguments="{video: video}"/>
 	</f:case>
@@ -8,4 +8,4 @@
 	<f:case value="vimeo">
 		<f:render partial="T3Html5Video/VideoFromVimeo" arguments="{video: video}"/>
 	</f:case>
-</switch>
+</f:switch>

@@ -15,12 +15,7 @@ Otherwise your changes will be overwritten the next time you save the extension 
 <f:section name="main">
 <f:flashMessages renderMode="div" />
 
-<f:comment><!-- TODO: define the sysfolder to read from --></f:comment>
-<f:debug>{t3Html5Videos}</f:debug>
-<f:debug>{data}</f:debug>
-<f:debug>{settings}</f:debug>
-<f:for each="{t3Html5Videos}" as="video">
-	<f:debug>{video}</f:debug>
+<f:for each="{t3Html5Videos.0}" as="video">
 	<f:render partial="T3Html5Video/SingleRecord" arguments="{video: video}"/>
 </f:for>
 

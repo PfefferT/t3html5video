@@ -60,6 +60,18 @@
 			<trans-unit id="tx_t3html5videoplayer_domain_model_t3html5video.preload.metadata">
 				<source>Metadata</source>
 			</trans-unit>
+			<trans-unit id="tx_t3html5videoplayer_domain_model_t3html5video.width">
+				<source>Width</source>
+			</trans-unit>
+			<trans-unit id="tx_t3html5videoplayer_domain_model_t3html5video.height">
+				<source>Height</source>
+			</trans-unit>
+			<trans-unit id="tx_t3html5videoplayer_domain_model_t3html5video.mediagroup">
+				<source>Mediagroup</source>
+			</trans-unit>
+			<trans-unit id="tx_t3html5videoplayer_domain_model_t3html5video.muted">
+				<source>Muted</source>
+			</trans-unit>
 			<trans-unit id="tx_t3html5videoplayer_domain_model_t3html5video.type.file">
 				<source>File</source>
 			</trans-unit>

@@ -111,6 +111,57 @@ class T3Html5Video extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	protected $videoPreloading = 0;
 
 	/**
+	 * Type
+	 *
+	 * @var string
+	 */
+	protected $type = '';
+
+	/**
+	 * Mediagroup
+	 *
+	 * @var string
+	 */
+	protected $mediagroup = '';
+
+	/**
+	 * Muted
+	 *
+	 * @var bool
+	 */
+	protected  $muted = FALSE;
+
+	/**
+	 * Width
+	 *
+	 * @var int
+	 */
+	protected  $width = 0;
+
+	/**
+	 * Height
+	 *
+	 * @var int
+	 */
+	protected  $height = 0;
+
+	/**
+	 * @return string
+	 */
+	public function getType()
+	{
+		return $this->type;
+	}
+
+	/**
+	 * @param string $type
+	 */
+	public function setType($type)
+	{
+		$this->type = $type;
+	}
+
+	/**
 	 * Returns the title
 	 * 
 	 * @return string $title
@@ -344,6 +395,70 @@ class T3Html5Video extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	 */
 	public function setVideoPreloading($videoPreloading) {
 		$this->videoPreloading = $videoPreloading;
+	}
+
+	/**
+	 * @return string
+	 */
+	public function getMediagroup()
+	{
+		return $this->mediagroup;
+	}
+
+	/**
+	 * @param string $mediagroup
+	 */
+	public function setMediagroup($mediagroup)
+	{
+		$this->mediagroup = $mediagroup;
+	}
+
+	/**
+	 * @return boolean
+	 */
+	public function isMuted()
+	{
+		return $this->muted;
+	}
+
+	/**
+	 * @param boolean $muted
+	 */
+	public function setMuted($muted)
+	{
+		$this->muted = $muted;
+	}
+
+	/**
+	 * @return int
+	 */
+	public function getWidth()
+	{
+		return $this->width;
+	}
+
+	/**
+	 * @param int $width
+	 */
+	public function setWidth($width)
+	{
+		$this->width = $width;
+	}
+
+	/**
+	 * @return int
+	 */
+	public function getHeight()
+	{
+		return $this->height;
+	}
+
+	/**
+	 * @param int $height
+	 */
+	public function setHeight($height)
+	{
+		$this->height = $height;
 	}
 
 }

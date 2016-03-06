@@ -24,10 +24,10 @@ return array(
 		'requestUpdate' => 'type'
 	),
 	'interface' => array(
-		'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, type, title, poster_image, mp4, ogg, webm, youtube_id, vimeo_id, video_autoplay, video_loop, video_controls, video_preloading, vimeo_controls_color',
+		'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, type, title, poster_image, mp4, ogg, webm, youtube_id, vimeo_id, video_autoplay, video_loop, video_controls, video_preloading, width, height, muted, mediagroup, vimeo_controls_color',
 	),
 	'types' => array(
-		'1' => array('showitem' => 'sys_language_uid;;;;1-1-1, l10n_parent, l10n_diffsource, hidden;;1, --div--;LLL:EXT:t3html5videoplayer/Resources/Private/Language/locallang_db.xlf:tx_t3html5videoplayer_domain_model_t3html5video.label.video, type, title, poster_image, mp4, ogg, webm, youtube_id, vimeo_id, --div--;LLL:EXT:t3html5videoplayer/Resources/Private/Language/locallang_db.xlf:tx_t3html5videoplayer_domain_model_t3html5video.label.configurations, video_autoplay, video_loop, video_controls, video_preloading, vimeo_controls_color, --div--;LLL:EXT:cms/locallang_ttc.xlf:tabs.access, starttime, endtime'),
+		'1' => array('showitem' => 'sys_language_uid;;;;1-1-1, l10n_parent, l10n_diffsource, hidden;;1, --div--;LLL:EXT:t3html5videoplayer/Resources/Private/Language/locallang_db.xlf:tx_t3html5videoplayer_domain_model_t3html5video.label.video, type, title, poster_image, mp4, ogg, webm, youtube_id, vimeo_id, --div--;LLL:EXT:t3html5videoplayer/Resources/Private/Language/locallang_db.xlf:tx_t3html5videoplayer_domain_model_t3html5video.label.configurations, video_autoplay, video_loop, video_controls, video_preloading, width, height, muted, mediagroup, vimeo_controls_color, --div--;LLL:EXT:cms/locallang_ttc.xlf:tabs.access, starttime, endtime'),
 	),
 	'palettes' => array(
 		'1' => array('showitem' => ''),
@@ -387,17 +387,58 @@ return array(
 				'eval' => ''
 			),
 		),
-		
-	),
-	'vimeo_controls_color' => array(
-		'displayCond' => 'FIELD:type:=:vimeo',
-		'exclude' => 1,
-		'label' => 'LLL:EXT:t3html5videoplayer/Resources/Private/Language/locallang_db.xlf:tx_t3html5videoplayer_domain_model_t3html5video.vimeo_controls_color',
-		'config' => array(
-			'type' => 'input',
-			'size' => 30,
-			'eval' => 'trim',
-			'default' => '00adef'
+		'width' => array(
+			'displayCond' => 'FIELD:type:=:file',
+			'exclude' => 1,
+			'label' => 'LLL:EXT:t3html5videoplayer/Resources/Private/Language/locallang_db.xlf:tx_t3html5videoplayer_domain_model_t3html5video.width',
+			'config' => array(
+				'type' => 'input',
+				'default' => '0',
+				'size' => 30,
+				'eval' => 'integer,trim'
+			),
+		),
+		'height' => array(
+			'displayCond' => 'FIELD:type:=:file',
+			'exclude' => 1,
+			'label' => 'LLL:EXT:t3html5videoplayer/Resources/Private/Language/locallang_db.xlf:tx_t3html5videoplayer_domain_model_t3html5video.height',
+			'config' => array(
+				'type' => 'input',
+				'default' => '0',
+				'size' => 30,
+				'eval' => 'integer,trim'
+			),
+		),
+		'mediagroup' => array(
+			'displayCond' => 'FIELD:type:=:file',
+			'exclude' => 1,
+			'label' => 'LLL:EXT:t3html5videoplayer/Resources/Private/Language/locallang_db.xlf:tx_t3html5videoplayer_domain_model_t3html5video.mediagroup',
+			'config' => array(
+				'type' => 'input',
+				'default' => '',
+				'size' => 30,
+				'eval' => 'trim'
+			),
+		),
+		'muted' => array(
+			'displayCond' => 'FIELD:type:=:file',
+			'exclude' => 1,
+			'label' => 'LLL:EXT:t3html5videoplayer/Resources/Private/Language/locallang_db.xlf:tx_t3html5videoplayer_domain_model_t3html5video.muted',
+			'config' => array(
+				'type' => 'check',
+				'default' => '0',
+			),
+		),
+		'vimeo_controls_color' => array(
+			'displayCond' => 'FIELD:type:=:vimeo',
+			'exclude' => 1,
+			'label' => 'LLL:EXT:t3html5videoplayer/Resources/Private/Language/locallang_db.xlf:tx_t3html5videoplayer_domain_model_t3html5video.vimeo_controls_color',
+			'config' => array(
+				'type' => 'input',
+				'size' => 30,
+				'eval' => 'trim',
+				'default' => '00adef'
+			),
 		),
 	),
 );
