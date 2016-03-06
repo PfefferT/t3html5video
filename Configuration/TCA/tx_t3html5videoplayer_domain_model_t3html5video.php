@@ -1,4 +1,6 @@
 <?php
+/** TODO: add setting for enable youtube and enable vimeo */
+
 return array(
 	'ctrl' => array(
 		'title'	=> 'LLL:EXT:t3html5videoplayer/Resources/Private/Language/locallang_db.xlf:tx_t3html5videoplayer_domain_model_t3html5video',
@@ -19,15 +21,14 @@ return array(
 			'starttime' => 'starttime',
 			'endtime' => 'endtime',
 		),
-		'searchFields' => 'type,title,,poster_image,mp4,ogg,webm,youtube_id,vimeo_id,video_autoplay,video_loop,video_controls,video_preloading,vimeo_controls_color',
 		'iconfile' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extRelPath('t3html5videoplayer') . 'Resources/Public/Icons/tx_t3html5videoplayer_domain_model_t3html5video.gif',
 		'requestUpdate' => 'type'
 	),
 	'interface' => array(
-		'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, type, title, poster_image, mp4, ogg, webm, youtube_id, vimeo_id, video_autoplay, video_loop, video_controls, video_preloading, width, height, muted, mediagroup, vimeo_controls_color',
+		'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, type, title, poster_image, mp4, ogg, webm, youtube_id, vimeo_id, video_autoplay, video_loop, video_controls, video_preloading, youtube_start, youtube_end, youtube_color, youtube_theme, youtube_autohide, youtube_disable_keyboard, youtube_enable_js_api, youtube_fullscreen, youtube_hl, youtube_list_type, youtube_list, youtube_playlist, youtube_origin, youtube_modestbranding, youtube_player_api_id, youtube_plays_inline, youtube_rel, youtube_showinfo, youtube_cc_load_policy, youtube_iv_load_policy, width, height, muted, mediagroup, vimeo_controls_color',
 	),
 	'types' => array(
-		'1' => array('showitem' => 'sys_language_uid;;;;1-1-1, l10n_parent, l10n_diffsource, hidden;;1, --div--;LLL:EXT:t3html5videoplayer/Resources/Private/Language/locallang_db.xlf:tx_t3html5videoplayer_domain_model_t3html5video.label.video, type, title, poster_image, mp4, ogg, webm, youtube_id, vimeo_id, --div--;LLL:EXT:t3html5videoplayer/Resources/Private/Language/locallang_db.xlf:tx_t3html5videoplayer_domain_model_t3html5video.label.configurations, video_autoplay, video_loop, video_controls, video_preloading, width, height, muted, mediagroup, vimeo_controls_color, --div--;LLL:EXT:cms/locallang_ttc.xlf:tabs.access, starttime, endtime'),
+		'1' => array('showitem' => 'sys_language_uid;;;;1-1-1, l10n_parent, l10n_diffsource, hidden;;1, --div--;LLL:EXT:t3html5videoplayer/Resources/Private/Language/locallang_db.xlf:tx_t3html5videoplayer_domain_model_t3html5video.label.video, type, title, poster_image, mp4, ogg, webm, youtube_id, vimeo_id, --div--;LLL:EXT:t3html5videoplayer/Resources/Private/Language/locallang_db.xlf:tx_t3html5videoplayer_domain_model_t3html5video.label.configurations, video_autoplay, video_loop, video_controls, video_preloading, youtube_start, youtube_end, youtube_color, youtube_theme, youtube_autohide, youtube_disable_keyboard, youtube_enable_js_api, youtube_fullscreen, youtube_hl, youtube_list_type, youtube_list, youtube_playlist, youtube_origin, youtube_modestbranding, youtube_player_api_id, youtube_plays_inline, youtube_rel, youtube_showinfo, youtube_cc_load_policy, youtube_iv_load_policy, width, height, muted, mediagroup, vimeo_controls_color, --div--;LLL:EXT:cms/locallang_ttc.xlf:tabs.access, starttime, endtime'),
 	),
 	'palettes' => array(
 		'1' => array('showitem' => ''),
@@ -385,6 +386,228 @@ return array(
 				'size' => 1,
 				'maxitems' => 1,
 				'eval' => ''
+			),
+		),
+		'youtube_autohide' => array(
+			'displayCond' => 'FIELD:type:=:youtube',
+			'exclude' => 1,
+			'label' => 'LLL:EXT:t3html5videoplayer/Resources/Private/Language/locallang_db.xlf:tx_t3html5videoplayer_domain_model_t3html5video.youtube.autohide',
+			'config' => array(
+				'type' => 'select',
+				'items' => array(
+					array(0, '0'),
+					array(1, '1'),
+					array(2, '2'),
+				),
+				'default' => '2',
+				'size' => 1,
+				'maxitems' => 1,
+				'eval' => ''
+			),
+		),
+		'youtube_iv_load_policy' => array(
+			'displayCond' => 'FIELD:type:=:youtube',
+			'exclude' => 1,
+			'label' => 'LLL:EXT:t3html5videoplayer/Resources/Private/Language/locallang_db.xlf:tx_t3html5videoplayer_domain_model_t3html5video.youtube.iv_load_policy',
+			'config' => array(
+				'type' => 'select',
+				'items' => array(
+					array(1, '1'),
+					array(3, '3'),
+				),
+				'default' => '1',
+				'size' => 1,
+				'maxitems' => 1,
+				'eval' => ''
+			),
+		),
+		'youtube_list_type' => array(
+			'displayCond' => 'FIELD:type:=:youtube',
+			'exclude' => 1,
+			'label' => 'LLL:EXT:t3html5videoplayer/Resources/Private/Language/locallang_db.xlf:tx_t3html5videoplayer_domain_model_t3html5video.youtube.listType',
+			'config' => array(
+				'type' => 'select',
+				'items' => array(
+					array('--none--', ''),
+					array('search', 'search'),
+					array('user_uploads', 'user_uploads'),
+					array('playlist', 'playlist'),
+				),
+				'default' => '',
+				'size' => 1,
+				'maxitems' => 1,
+				'eval' => ''
+			),
+		),
+		'youtube_cc_load_policy' => array(
+			'displayCond' => 'FIELD:type:=:youtube',
+			'exclude' => 1,
+			'label' => 'LLL:EXT:t3html5videoplayer/Resources/Private/Language/locallang_db.xlf:tx_t3html5videoplayer_domain_model_t3html5video.youtube.cc_load_policy',
+			'config' => array(
+				'type' => 'check',
+				'default' => '0',
+			),
+		),
+		'youtube_disable_keyboard' => array(
+			'displayCond' => 'FIELD:type:=:youtube',
+			'exclude' => 1,
+			'label' => 'LLL:EXT:t3html5videoplayer/Resources/Private/Language/locallang_db.xlf:tx_t3html5videoplayer_domain_model_t3html5video.youtube.disablekb',
+			'config' => array(
+				'type' => 'check',
+				'default' => '0',
+			),
+		),
+		'youtube_enable_js_api' => array(
+			'displayCond' => 'FIELD:type:=:youtube',
+			'exclude' => 1,
+			'label' => 'LLL:EXT:t3html5videoplayer/Resources/Private/Language/locallang_db.xlf:tx_t3html5videoplayer_domain_model_t3html5video.youtube.enablejsapi',
+			'config' => array(
+				'type' => 'check',
+				'default' => '0',
+			),
+		),
+		'youtube_fullscreen' => array(
+			'displayCond' => 'FIELD:type:=:youtube',
+			'exclude' => 1,
+			'label' => 'LLL:EXT:t3html5videoplayer/Resources/Private/Language/locallang_db.xlf:tx_t3html5videoplayer_domain_model_t3html5video.youtube.fs',
+			'config' => array(
+				'type' => 'check',
+				'default' => '1',
+			),
+		),
+		'youtube_modestbranding' => array(
+			'displayCond' => 'FIELD:type:=:youtube',
+			'exclude' => 1,
+			'label' => 'LLL:EXT:t3html5videoplayer/Resources/Private/Language/locallang_db.xlf:tx_t3html5videoplayer_domain_model_t3html5video.youtube.modestbranding',
+			'config' => array(
+				'type' => 'check',
+				'default' => '0',
+			),
+		),
+		'youtube_plays_inline' => array(
+			'displayCond' => 'FIELD:type:=:youtube',
+			'exclude' => 1,
+			'label' => 'LLL:EXT:t3html5videoplayer/Resources/Private/Language/locallang_db.xlf:tx_t3html5videoplayer_domain_model_t3html5video.youtube.playsinline',
+			'config' => array(
+				'type' => 'check',
+				'default' => '0',
+			),
+		),
+		'youtube_rel' => array(
+			'displayCond' => 'FIELD:type:=:youtube',
+			'exclude' => 1,
+			'label' => 'LLL:EXT:t3html5videoplayer/Resources/Private/Language/locallang_db.xlf:tx_t3html5videoplayer_domain_model_t3html5video.youtube.rel',
+			'config' => array(
+				'type' => 'check',
+				'default' => '1',
+			),
+		),
+		'youtube_showinfo' => array(
+			'displayCond' => 'FIELD:type:=:youtube',
+			'exclude' => 1,
+			'label' => 'LLL:EXT:t3html5videoplayer/Resources/Private/Language/locallang_db.xlf:tx_t3html5videoplayer_domain_model_t3html5video.youtube.showinfo',
+			'config' => array(
+				'type' => 'check',
+				'default' => '1',
+			),
+		),
+		'youtube_list' => array(
+			'displayCond' => 'FIELD:type:=:youtube',
+			'exclude' => 1,
+			'label' => 'LLL:EXT:t3html5videoplayer/Resources/Private/Language/locallang_db.xlf:tx_t3html5videoplayer_domain_model_t3html5video.youtube.list',
+			'config' => array(
+				'type' => 'input',
+				'default' => '',
+				'size' => 30,
+				'eval' => 'trim'
+			),
+		),
+		'youtube_origin' => array(
+			'displayCond' => 'FIELD:type:=:youtube',
+			'exclude' => 1,
+			'label' => 'LLL:EXT:t3html5videoplayer/Resources/Private/Language/locallang_db.xlf:tx_t3html5videoplayer_domain_model_t3html5video.youtube.origin',
+			'config' => array(
+				'type' => 'input',
+				'default' => '',
+				'size' => 30,
+				'eval' => 'trim'
+			),
+		),
+		'youtube_player_api_id' => array(
+			'displayCond' => 'FIELD:type:=:youtube',
+			'exclude' => 1,
+			'label' => 'LLL:EXT:t3html5videoplayer/Resources/Private/Language/locallang_db.xlf:tx_t3html5videoplayer_domain_model_t3html5video.youtube.playerapiid',
+			'config' => array(
+				'type' => 'input',
+				'default' => '',
+				'size' => 30,
+				'eval' => 'trim'
+			),
+		),
+		'youtube_playlist' => array(
+			'displayCond' => 'FIELD:type:=:youtube',
+			'exclude' => 1,
+			'label' => 'LLL:EXT:t3html5videoplayer/Resources/Private/Language/locallang_db.xlf:tx_t3html5videoplayer_domain_model_t3html5video.youtube.playlist',
+			'config' => array(
+				'type' => 'input',
+				'default' => '',
+				'size' => 30,
+				'eval' => 'trim'
+			),
+		),
+		'youtube_color' => array(
+			'displayCond' => 'FIELD:type:=:youtube',
+			'exclude' => 1,
+			'label' => 'LLL:EXT:t3html5videoplayer/Resources/Private/Language/locallang_db.xlf:tx_t3html5videoplayer_domain_model_t3html5video.youtube.color',
+			'config' => array(
+				'type' => 'input',
+				'default' => 'red',
+				'size' => 30,
+				'eval' => 'trim'
+			),
+		),
+		'youtube_theme' => array(
+			'displayCond' => 'FIELD:type:=:youtube',
+			'exclude' => 1,
+			'label' => 'LLL:EXT:t3html5videoplayer/Resources/Private/Language/locallang_db.xlf:tx_t3html5videoplayer_domain_model_t3html5video.youtube.theme',
+			'config' => array(
+				'type' => 'input',
+				'default' => '',
+				'size' => 30,
+				'eval' => 'trim'
+			),
+		),
+		'youtube_hl' => array(
+			'displayCond' => 'FIELD:type:=:youtube',
+			'exclude' => 1,
+			'label' => 'LLL:EXT:t3html5videoplayer/Resources/Private/Language/locallang_db.xlf:tx_t3html5videoplayer_domain_model_t3html5video.youtube.hl',
+			'config' => array(
+				'type' => 'input',
+				'default' => '',
+				'size' => 30,
+				'eval' => 'trim'
+			),
+		),
+		'youtube_start' => array(
+			'displayCond' => 'FIELD:type:=:youtube',
+			'exclude' => 1,
+			'label' => 'LLL:EXT:t3html5videoplayer/Resources/Private/Language/locallang_db.xlf:tx_t3html5videoplayer_domain_model_t3html5video.youtube.start',
+			'config' => array(
+				'type' => 'input',
+				'default' => '0',
+				'size' => 30,
+				'eval' => 'integer,trim'
+			),
+		),
+		'youtube_end' => array(
+			'displayCond' => 'FIELD:type:=:youtube',
+			'exclude' => 1,
+			'label' => 'LLL:EXT:t3html5videoplayer/Resources/Private/Language/locallang_db.xlf:tx_t3html5videoplayer_domain_model_t3html5video.youtube.end',
+			'config' => array(
+				'type' => 'input',
+				'default' => '0',
+				'size' => 30,
+				'eval' => 'integer,trim'
 			),
 		),
 		'width' => array(

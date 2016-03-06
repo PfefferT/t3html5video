@@ -1,3 +1,4 @@
+<f:debug>{video}</f:debug>
 <iframe id="youtube_{video.uid}" class="video video__iframe" type="text/html"
         src="http://www.youtube.com/embed/{video.youtubeId}?html5=1&controls={f:if(condition:'{video.videoControls}', then: '1', else: '0')}&autoplay={f:if(condition:'{video.videoAutoplay}', then: '1', else: '0')}&loop={f:if(condition:'{video.videoLoop}', then: '1', else: '0')}"
         frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>

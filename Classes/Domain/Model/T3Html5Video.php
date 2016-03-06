@@ -76,6 +76,146 @@ class T3Html5Video extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	protected $youtubeId = '';
 
 	/**
+	 * $youtubeAutohide
+	 *
+	 * @var int
+	 */
+	protected $youtubeAutohide = 2;
+
+	/**
+	 * $youtubeCcLoadPolicy
+	 *
+	 * @var int
+	 */
+	protected $youtubeCcLoadPolicy = 0;
+
+	/**
+	 * $youtubeColor
+	 *
+	 * @var string
+	 */
+	protected $youtubeColor = 'red';
+
+	/**
+	 * $youtubeTheme
+	 *
+	 * @var string
+	 */
+	protected $youtubeTheme = '';
+
+	/**
+	 * $youtubeStart
+	 *
+	 * @var int
+	 */
+	protected $youtubeStart = 0;
+
+	/**
+	 * $youtubeEnd
+	 *
+	 * @var int
+	 */
+	protected $youtubeEnd = 0;
+
+	/**
+	 * $youtubeEnableJsApi
+	 *
+	 * @var int
+	 */
+	protected $youtubeEnableJsApi = 0;
+
+	/**
+	 * $youtubeDisableKeyboard
+	 *
+	 * @var int
+	 */
+	protected $youtubeDisableKeyboard = 0;
+
+	/**
+	 * $youtubeFullscreen
+	 *
+	 * @var int
+	 */
+	protected $youtubeFullscreen = 1;
+
+	/**
+	 * $youtubeHl
+	 *
+	 * @var string
+	 */
+	protected $youtubeHl = '';
+
+	/**
+	 * $youtubeIvLoadPolicy
+	 *
+	 * @var int
+	 */
+	protected $youtubeIvLoadPolicy = 1;
+
+	/**
+	 * $youtubeListType
+	 *
+	 * @var string
+	 */
+	protected $youtubeListType = '';
+
+	/**
+	 * $youtubeLlist
+	 *
+	 * @var string
+	 */
+	protected $youtubeLlist = '';
+
+	/**
+	 * $youtubeModestbranding
+	 *
+	 * @var int
+	 */
+	protected $youtubeModestbranding = 0;
+
+	/**
+	 * $youtubeOrigin
+	 *
+	 * @var string
+	 */
+	protected $youtubeOrigin = '';
+
+	/**
+	 * $youtubePlayerApiId
+	 *
+	 * @var string
+	 */
+	protected $youtubePlayerApiId = '';
+
+	/**
+	 * $youtubePlaylist
+	 *
+	 * @var string
+	 */
+	protected $youtubePlaylist = '';
+
+	/**
+	 * $youtubePlaysInline
+	 *
+	 * @var int
+	 */
+	protected $youtubePlaysInline = 0;
+
+	/**
+	 * $youtubeRel
+	 *
+	 * @var int
+	 */
+	protected $youtubeRel = 1;
+
+	/**
+	 * $youtubeShowInfo
+	 *
+	 * @var int
+	 */
+	protected $youtubeShowInfo = 1;
+
+	/**
 	 * Vimeo Id
 	 * 
 	 * @var string
